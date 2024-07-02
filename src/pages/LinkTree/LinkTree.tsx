@@ -2,7 +2,7 @@ import { AuroraBackground } from '@/components/ui/auroraBackground';
 import { motion } from 'framer-motion';
 import Logo from '/RJ-Logo.png';
 import { BackgroundGradient } from '@/components/ui/backgroundGradient';
-import { Meteors } from '@/components/ui/meteors';
+// import { Meteors } from '@/components/ui/meteors';
 import { Link } from 'react-router-dom';
 
 import { FaLinkedin } from 'react-icons/fa';
@@ -47,7 +47,7 @@ const LinkTree = () => {
             >
               <FaLinkedin className='absolute left-4 w-6 h-6 z-20' />
               Linkedin
-              <Meteors number={5} />
+              {/* <Meteors number={5} /> */}
             </Link>
 
             {/* Instagram */}
@@ -58,7 +58,7 @@ const LinkTree = () => {
             >
               <AiFillInstagram className='absolute left-4 w-6 h-6 z-20' />
               Instagram
-              <Meteors number={5} />
+              {/* <Meteors number={5} /> */}
             </Link>
 
             {/* Github */}
@@ -69,7 +69,7 @@ const LinkTree = () => {
             >
               <FaGithubSquare className='absolute left-4 w-6 h-6 z-20' />
               Github
-              <Meteors number={5} />
+              {/* <Meteors number={5} /> */}
             </Link>
 
             {/* Curriculum */}
@@ -80,7 +80,7 @@ const LinkTree = () => {
             >
               <IoDownload className='absolute left-4 w-6 h-6 z-20' />
               Curriculum
-              <Meteors number={5} />
+              {/* <Meteors number={5} /> */}
             </Link>
 
             {/* Ver portafolio */}
@@ -91,7 +91,7 @@ const LinkTree = () => {
             >
               <FaGlobe className='absolute left-4 w-6 h-6 z-20' />
               Ver portfolio
-              <Meteors number={5} />
+              // <Meteors number={5} />
             </Link> */}
           </section>
         </motion.div>
