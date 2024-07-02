@@ -13,7 +13,7 @@ import { IoDownload } from 'react-icons/io5';
 
 const LinkTree = () => {
   return (
-    <div className='h-[100vh] w-full flex justify-center items-center bggradien bg-gradient-to-b  from-slate-300 to-slate-500 dark:from-slate-900 dark:to-slate-700'>
+    <div className='h-[100dvh] w-full flex justify-center items-center bggradien bg-gradient-to-b  from-slate-300 to-slate-500 dark:from-slate-900 dark:to-slate-700'>
       <main className='px-6 w-full flex justify-center'>
         <motion.div
           initial={{ opacity: 0.0, x: -40 }}
