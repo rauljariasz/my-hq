@@ -21,5 +21,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: 'https://rauljariasz.github.io/my-hq/',
+  base: 'http://hq.rauljariasz.com/',
 });
