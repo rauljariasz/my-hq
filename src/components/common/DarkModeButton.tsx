@@ -1,10 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdDarkMode } from 'react-icons/md';
 import { MdLightMode } from 'react-icons/md';
 
 const DarkModeButton = () => {
   const html = document.querySelector('html');
   const [darkmode, setDarkmode] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (!html) {
+      return;
+    }
+
+    // Verifica si el elemento HTML ya tiene la clase 'dark'
+    if (html.classList.contains('dark')) {
+      setDarkmode(true);
+    } else {
+      setDarkmode(false);
+    }
+  }, [html]);
 
   if (!html) {
     return;

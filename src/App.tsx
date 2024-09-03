@@ -1,6 +1,6 @@
-import { HashRouter } from 'react-router-dom';
-import AppRoutes from './pages/AppRoutes';
 import { useEffect } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import router from './pages/AppRoutes';
 
 function App() {
   // Efecto para que aplique darkmode por defecto
@@ -13,9 +13,9 @@ function App() {
   }, []);
 
   return (
-    <HashRouter>
-      <AppRoutes />
-    </HashRouter>
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
   );
 }
 

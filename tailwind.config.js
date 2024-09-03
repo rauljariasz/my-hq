@@ -6,6 +6,11 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        primary: '#6694b3',
+        'primary-dark': '#e0f3ff',
+        secondary: '#141D23',
+      },
       animation: {
         aurora: 'aurora 60s linear infinite',
         shimmer: 'shimmer 2s linear infinite',

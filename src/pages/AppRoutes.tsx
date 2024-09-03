@@ -1,18 +1,18 @@
-import { Route, Routes } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
 import LinkTree from './LinkTree/LinkTree';
-import DarkModeButton from '@/components/common/DarkModeButton';
-import WhatsappButton from '@/components/common/WhatsappButton';
+import Portfolio from './Portfolio/Porfolio';
 
-const AppRoutes = () => {
-  return (
+const router = createBrowserRouter(
+  createRoutesFromElements(
     <>
-      <WhatsappButton />
-      <DarkModeButton />
-      <Routes>
-        <Route path='/' element={<LinkTree />} />
-      </Routes>
+      <Route path='/' element={<LinkTree />}></Route>
+      <Route path='/portfolio' element={<Portfolio />} />
     </>
-  );
-};
+  )
+);
 
-export default AppRoutes;
+export default router;

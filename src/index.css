@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  ::view-transition-new(prueba),
+  ::view-transition-old(prueba) {
+    transition-duration: 2s;
+  }
+
+  ::view-transition-old(prueba) {
+    animation-name: scaleIn;
+  }
+
+  ::view-transition-new(prueba) {
+    animation: scaleOut;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+
+  @keyframes scaleOut {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
