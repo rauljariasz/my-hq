@@ -1,5 +1,6 @@
 import AboutMeModal from '@/components/Portfolio/AboutMeModal';
 import ExperienciaLaboral from '@/components/Portfolio/ExperienciaLaboral';
+import Footer from '@/components/Portfolio/Footer';
 import Habilidades from '@/components/Portfolio/Habilidades';
 import LogoSlider from '@/components/Portfolio/LogoSlider';
 import Proyectos from '@/components/Portfolio/Proyectos';
@@ -9,7 +10,7 @@ const Porfolio = () => {
   const [aboutModal, setAboutModal] = useState(false);
 
   return (
-    <div className='min-h-[100dvh] py-7  bg-gradient-to-b  from-slate-300 to-slate-200 dark:from-slate-900 dark:to-slate-700'>
+    <div className='min-h-[100dvh] pt-7  bg-gradient-to-b  from-slate-300 to-slate-200 dark:from-slate-900 dark:to-slate-700'>
       {/* Modal "About Me" */}
       <AboutMeModal aboutModal={aboutModal} setAboutModal={setAboutModal} />
       {/* Transparencia */}
@@ -34,6 +35,8 @@ const Porfolio = () => {
         {/* Habilidades */}
         <Habilidades />
       </main>
+
+      <Footer />
     </div>
   );
 };
