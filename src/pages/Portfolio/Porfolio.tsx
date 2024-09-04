@@ -1,6 +1,8 @@
 import AboutMeModal from '@/components/Portfolio/AboutMeModal';
 import ExperienciaLaboral from '@/components/Portfolio/ExperienciaLaboral';
+import Habilidades from '@/components/Portfolio/Habilidades';
 import LogoSlider from '@/components/Portfolio/LogoSlider';
+import Proyectos from '@/components/Portfolio/Proyectos';
 import { useState } from 'react';
 
 const Porfolio = () => {
@@ -14,7 +16,7 @@ const Porfolio = () => {
       <div
         onClick={() => setAboutModal(false)}
         className={`w-[100%] h-[100dvh] ${
-          aboutModal ? 'absolute top-0 left-0' : 'hidden'
+          aboutModal ? 'fixed top-0 left-0' : 'hidden'
         } bg-[#000000aa] transition-all backdrop-blur-[5px] z-[99]`}
       ></div>
 
@@ -22,9 +24,15 @@ const Porfolio = () => {
       <LogoSlider />
 
       {/* Contenido */}
-      <main className='px-6 lg:px-0 max-w-[760px] mx-auto mt-[40px]'>
+      <main className='px-6 lg:px-0 max-w-[900px] mx-auto mt-[40px]'>
         {/* Experiencia laboral */}
         <ExperienciaLaboral />
+
+        {/* Proyectos */}
+        <Proyectos />
+
+        {/* Habilidades */}
+        <Habilidades />
       </main>
     </div>
   );

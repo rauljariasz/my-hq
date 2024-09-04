@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+import { nextui } from '@nextui-org/react';
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -13,7 +17,6 @@ export default {
       },
       animation: {
         aurora: 'aurora 60s linear infinite',
-        shimmer: 'shimmer 2s linear infinite',
         'meteor-effect': 'meteor 5s linear infinite',
       },
       keyframes: {
@@ -23,14 +26,6 @@ export default {
           },
           to: {
             backgroundPosition: '350% 50%, 350% 50%',
-          },
-        },
-        shimmer: {
-          from: {
-            backgroundPosition: '0 0',
-          },
-          to: {
-            backgroundPosition: '-200% 0',
           },
         },
         meteor: {
@@ -44,7 +39,7 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, nextui()],
 };
 
 function addVariablesForColors({ addBase, theme }) {

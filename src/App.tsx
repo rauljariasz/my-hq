@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import router from './pages/AppRoutes';
+import { NextUIProvider } from '@nextui-org/react';
 
 function App() {
   // Efecto para que aplique darkmode por defecto
@@ -14,7 +15,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <NextUIProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </NextUIProvider>
     </>
   );
 }
