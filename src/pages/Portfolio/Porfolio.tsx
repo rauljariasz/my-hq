@@ -7,7 +7,7 @@ import Proyectos from '@/components/Portfolio/Proyectos';
 import { useState } from 'react';
 
 const Porfolio = () => {
-  const [aboutModal, setAboutModal] = useState(false);
+  const [aboutModal, setAboutModal] = useState(true);
 
   return (
     <div className='min-h-[100dvh] pt-7  bg-gradient-to-b  from-slate-300 to-slate-200 dark:from-slate-900 dark:to-slate-700'>
